@@ -1,3 +1,5 @@
+require('./style/add_node.pcss');
+
 import React from 'react'; // eslint-disable-line no-unused-vars
 
 const AddNode = ({ onAdd }) => (

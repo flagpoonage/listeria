@@ -6,7 +6,7 @@ const PageTreeView = connect(
   state => state.app
 )(({ rootNode, dispatch }) => (
   <div className="tree_view">
-    <TreeNode node={rootNode} dispatch={dispatch} />
+    <TreeNode node={rootNode} dispatch={dispatch} alternate={false} />
   </div>
 ));
 

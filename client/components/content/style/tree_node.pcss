@@ -1,5 +1,60 @@
 .tree_node {
+  background-color: #eff7ff;
+  transition: background linear 0.15s;
+
+  &[data-hoverstate=true] {
+    > .heading .toggle {
+      width: 35px;
+    }
+  }
+
   > .tree_node {
-    margin-left: 20px;
+    margin-left: 25px;
+
+    &.alt {
+      background-color: #dceeff;
+    }
+  }
+
+  + .tree_node {
+    border-top: solid 5px #dceeff;
+
+    &.alt {
+      border-top: solid 5px #eff7ff;
+    }
+  }
+
+  .heading {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    line-height: 25px;
+  }
+
+  .toggle {
+    width: 0;
+    overflow: hidden;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    transition: width linear 0.1s;
+
+    .fa {
+      transform: rotate(0deg);
+      transition: all ease 0.2s;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+
+    &.collapsed .fa {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .title {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 14px;
   }
 }
